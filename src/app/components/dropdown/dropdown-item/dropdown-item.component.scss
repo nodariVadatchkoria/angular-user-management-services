@@ -1,0 +1,14 @@
+.item {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  color: black;
+
+  &:hover {
+    background-color: #9bffe9;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

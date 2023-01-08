@@ -1,0 +1,22 @@
+.btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: black;
+
+  &:hover {
+    background-color: #ccc;
+  }
+
+  &.btn-primary {
+    background-color: green;
+    color: white;
+  }
+
+  &.btn-danger {
+    background-color: red;
+    color: white;
+  }
+}

@@ -1,0 +1,16 @@
+<div>
+  <app-add-user></app-add-user>
+</div>
+
+<div class="user-items">
+  <ng-container *ngFor="let user of users; let i = index; let first = first; let last = last">
+    <app-user-item
+      [user]="user"
+      [index]="i"
+    ></app-user-item>
+  </ng-container>
+</div>
+
+<!--<pre>-->
+<!--  {{users | json}}-->
+<!--</pre>-->

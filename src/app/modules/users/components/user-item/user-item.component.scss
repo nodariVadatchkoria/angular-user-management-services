@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  .user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+
+  }
+}

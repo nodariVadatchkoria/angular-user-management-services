@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="user-info">
+    <div>Full Name: {{user?.fullName}}</div>
+    <div>Role: {{user?.role}}</div>
+    <div>Status: {{user?.status}}</div>
+  </div>
+  <div class="footer">
+    <div class="actions">
+      <ng-container *appRolePermission="user?.role || 'guest'">
+        <app-button
+          *ngIf="user?.status !== 'active'"
+          mode="primary"
+          (click)="changeStatus('active')">
+          Activate
+        </app-button>
+        <app-button
+          *ngIf="user?.status !== 'inactive'"
+          mode="danger"
+          (click)="changeStatus('inactive')">
+          Deactivate
+        </app-button>
+        <app-button
+          *ngIf="user?.status !== 'banned'"
+          mode="danger"
+          (click)="changeStatus('banned')">
+          Ban
+        </app-button>
+      </ng-container>
+    </div>
+    <div>
+      <app-dropdown buttonText="Change role">
+        <app-dropdown-item (click)="changeRole('admin')">Admin</app-dropdown-item>
+        <app-dropdown-item (click)="changeRole('user')">User</app-dropdown-item>
+        <app-dropdown-item (click)="changeRole('guest')">Guest</app-dropdown-item>
+      </app-dropdown>
+    </div>
+  </div>
+
+</div>
